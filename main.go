@@ -6,7 +6,6 @@ import (
 	"sort"
 
 	"github.com/gocarina/gocsv"
-	"github.com/joho/godotenv"
 	"github.com/resend/resend-go/v2"
 )
 
@@ -208,10 +207,6 @@ func sendEmail(eventsHtml string) {
 }
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		panic(err)
-	}
 	createFile()
 
 	events := readFile()
